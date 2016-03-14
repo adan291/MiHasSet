@@ -87,7 +87,6 @@ public class MiHashSet
             //nuevo conjunto
             int[] newCollection  = new int[collection.length - 1];
 
-            
             //busqueda del registro el elemnto
             for(int index = 0; index < collection.length ; index++ )
             {
@@ -118,7 +117,7 @@ public class MiHashSet
             if(delete){ 
                 collection   = newCollection;
             }
-            
+
         }
         return delete;
     }
@@ -154,11 +153,11 @@ public class MiHashSet
      * falso en otro caso.
      */
     public boolean equals(MiHashSet otroConjunto){
-       boolean coinciden = false;
+        boolean coinciden = false;
         int i = 0;
         if(otroConjunto.size() == collection.length) {
             coinciden = true;
-            while ((i < collection.length) && !(coinciden)) {
+            while ((i < collection.length) && coinciden) {
                 if (!(otroConjunto.contains(collection[i]))) {
                     coinciden = false;
                 }
