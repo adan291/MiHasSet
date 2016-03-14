@@ -60,5 +60,20 @@ public class ArrayListInt
     {
         return collection.length==0;
     }
+    /**
+     * Metodo que devuelve true si la colección contiene ese elemento.
+     */
+    public boolean contains(int  element)
+    { boolean contains = false;
+        //Recorremos en busca del elemento
+        for (int index = 0; index < collection.length && !contains; index++ )
+        {
+            if (collection[index] ==  element)//Si la coleccion contiene ese elemento
+            {
+                contains = true;
+            }
+        }
+        return contains;
+    }
 
 }
