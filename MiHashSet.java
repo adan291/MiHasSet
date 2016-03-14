@@ -24,7 +24,7 @@ public class MiHashSet
         //false si esta contenido en la coleccion true si no lo esta
         boolean noContains = true;
 
-        //nueva coleccion en caso de agregar un nuevo elemento
+        //nueva coleccion para agregar un nuevo elemento
         int[] newCollection = new int[collection.length+1];
 
         for(int i = 0; i < collection.length && noContains; i++){
@@ -81,7 +81,7 @@ public class MiHashSet
      */
     public boolean remove(int elemento){
         boolean delete = false;
-        //si el mapa esta vacio directamente no se realiza ninguna accion y se devuelve -1
+        //Si esta vacio directamente no se realiza ninguna accion y se devuelve -1
         if(collection.length != 0)
         {
             //nuevo conjunto
@@ -91,16 +91,16 @@ public class MiHashSet
             //busqueda del registro el elemnto
             for(int index = 0; index < collection.length ; index++ )
             {
-                //si el elemnto coincide realiza borrado
+                //si el elemnto coincide realiza el borrado
                 if (collection[index] == elemento){
-                    //marcar como borrado no se guardara en la nuevo conjunto
+                    //Se ha borrado no se guardara en el nuevo conjunto
                     delete = true;
                 }
 
                 //no encontrado elemento especificada
                 else if(!delete){
-                    //-si el ultimo elemento si no es el ultimo elemento no se relaizan modificaciones
-                    //-en el restro de casos se guarda el nuevo conjunto
+                    //si el ultimo elemento si no es el ultimo elemento no se relaizan modificaciones
+                    //en el resto de casos se guarda el nuevo conjunto
                     if(index != collection.length - 1 ){
                         newCollection[index]   = collection[index];
 
