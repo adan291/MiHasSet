@@ -133,4 +133,16 @@ public class ArrayListInt
     {
         return collection.length;
     }
+    
+    
+    /**
+     * Metodo que devuelve verdadero si el parámetro es igual al conjunto sobre el que se invoca y falso 
+     * en otro caso.
+     */
+    public boolean equals(MiHashSet otroConjunto)
+    {
+        boolean exist = false;
+
+        return exist;
+    }
 }
