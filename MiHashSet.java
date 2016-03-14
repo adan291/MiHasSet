@@ -142,7 +142,7 @@ public class MiHashSet
 
             }
             else{ 
-                toString = toString + "," + collection[i];	
+                toString = toString + ", " + collection[i];	
             }
         }
         toString = toString + "]";
@@ -154,16 +154,17 @@ public class MiHashSet
      * falso en otro caso.
      */
     public boolean equals(MiHashSet otroConjunto){
-        boolean equals = true;
-        if(otroConjunto.size() == size())
-        {
-            for(int i = 0;i < collection.length && equals ; i++){
-                if(!otroConjunto.contains(collection[i])){
-                    equals = false;
+       boolean coinciden = false;
+        int i = 0;
+        if(otroConjunto.size() == collection.length) {
+            coinciden = true;
+            while ((i < collection.length) && !(coinciden)) {
+                if (!(otroConjunto.contains(collection[i]))) {
+                    coinciden = false;
                 }
+                i++;
             }
         }
-
-        return equals;
+        return coinciden;
     }
 }
