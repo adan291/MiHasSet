@@ -53,5 +53,12 @@ public class ArrayListInt
     {
         collection = new int[0];
     }
+    /**
+     * Metodo que devuelve true si la lista no contiene elementos.
+     */
+    public boolean isEmpty()
+    {
+        return collection.length==0;
+    }
 
 }
