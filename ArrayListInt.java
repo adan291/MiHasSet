@@ -112,6 +112,21 @@ public class ArrayListInt
     }
     
     /**
+     * devuelve una cadena conteniendo todos los elementos del conjunto separados por comas 
+     * y entre corchetes.
+     */
+    public String toString()
+    {
+        String cadena = "";
+        for(int i=0; i<collection.length;i++)
+        {
+            cadena = "[" + cadena + collection[i] +"]" + ",";
+        }
+
+        return cadena;
+    }
+    
+    /**
      * Metodo que devuelve el número de elementos de la colección.
      */
     public int size()
