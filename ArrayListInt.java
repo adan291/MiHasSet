@@ -23,7 +23,7 @@ public class ArrayListInt
      */
     public boolean add (int element)
     {
-        boolean contains = false;
+        boolean contains = true;
         //nueva lista creada
         int[] newList = new int[collection.length + 1];
         //Copiamos de la lista antigua a la nueva
@@ -32,7 +32,7 @@ public class ArrayListInt
             newList[index] = collection[index];
             if (collection[index] ==  element)//Si la coleccion contiene ese elemento
             {
-                contains = true;
+                contains = false;
             }
         }
         
@@ -45,6 +45,13 @@ public class ArrayListInt
         return contains ;
 
     }
+    
+    /**
+     * Metodo que vacia la coleccion
+     */
+    public void clear()
+    {
+        collection = new int[0];
+    }
 
-   
 }
