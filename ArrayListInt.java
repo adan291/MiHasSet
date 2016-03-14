@@ -75,5 +75,47 @@ public class ArrayListInt
         }
         return contains;
     }
+    
+    /**
+     * Metodo que  elimina de la colección el elemento que ocupa la posición especificada y
+     * devuelve dicho elemento. 
+     * Si el valor de index no es válido, no hace nada y devuelve -1.
+     */
+    public int remove(int index)
+    {
+        int num = -1;
+        int[] newList = new int[collection.length - 1]; 
+        if(index < collection.length && index >= 0)
+        {
+            //Guardamos los elementos en las posiciones indicadas a las anteriores
+            for (int i = 0;   i != index; i++ )
+            {
+                newList[i] = collection[i]; 
+            }
 
+            //guardamos el elemento que se borra pero no lo añadimos a la nueva lista
+
+            num = collection[index];
+
+            //Metemos el nuevo elemento despues de la posicion indicada
+            for (int i = index+1; i < collection.length;  i++ )
+            {
+                newList[i-1] = collection[i];
+            }
+
+            //Guardamos la lista nueva
+            collection = newList;
+
+        }
+
+        return num;
+    }
+    
+    /**
+     * Metodo que devuelve el número de elementos de la colección.
+     */
+    public int size()
+    {
+        return collection.length;
+    }
 }
